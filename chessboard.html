@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/dusk/64/000000/chess.png">
+    <title>Chess</title>
+    <link rel="stylesheet" href="./css/chess.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+</head>
+<body class="d-flex justify-content-center">
+    <div id="boardInput" class="p-2 flex-fill">
+        <div>
+            <input type="number" name="x" min="0" max="7" id="x" placeholder="Toạ độ X"><br>
+            <input type="number" name="y" min="0" max="7" id="y" placeholder="Toạ độ Y"><br>
+        </div>
+        <div>
+            <select name="chess" id="chess">
+                <option value="">Chọn quân cờ</option>
+                <option value="0">Tốt</option>
+                <option value="1">Tượng</option>
+                <option value="2">Mã</option>
+                <option value="3">Xe</option>
+                <option value="4">Hậu</option>
+                <option value="5">Vua</option>
+            </select><br>
+            <button type="button" onclick="submit()" id="submit" class="btn btn-secondary">Đặt quân</button>
+        </div>
+    </div>
+    <table id="chess-board">
+    </table>
+    <script type="text/javascript" src="./js/chess.js"></script>
+    <script type="text/javascript" src="./js/tot.js"></script>
+    <script type="text/javascript" src="./js/tuong.js"></script>
+    <script type="text/javascript" src="./js/xe.js"></script>
+    <script type="text/javascript" src="./js/vua.js"></script>
+    <script type="text/javascript" src="./js/hau.js"></script>
+    <script type="text/javascript" src="./js/ma.js"></script>
+    <script>window.onload = render();</script>
+</body>
+</html>
