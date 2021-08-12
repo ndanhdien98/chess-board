@@ -40,6 +40,10 @@ function xe(x,y) {
             break;
         }
     }
-    console.log(arr);
+    arr.forEach(element => {
+        var ids = `${element[0]}${element[1]}`;
+        document.getElementById(ids).innerHTML = `<img src="./img/cham.png" alt="">`
+        // console.log(ids);
+    });
     return arr;
 }

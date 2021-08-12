@@ -24,6 +24,10 @@ function vua(x,y) {
     if (x + 1 >= 0 && x + 1 <= 7 && y - 1 >= 0 && y - 1 <= 7){
         arr.push([x + 1,y - 1]);
     }
-    console.log(arr);
+    arr.forEach(element => {
+        var ids = `${element[0]}${element[1]}`;
+        document.getElementById(ids).innerHTML = `<img src="./img/cham.png" alt="">`
+        // console.log(ids);
+    });
     return arr;
 }

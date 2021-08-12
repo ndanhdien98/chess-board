@@ -5,7 +5,7 @@ function tuong(x,y) {
     //Tren trai
     for (let index = 0; index < 8; index++) {
         --y1; --x1;
-        if (y1 === 0 || x1 === 0){
+        if (y1 < 0 || x1 < 0){
             break;
         }
         arr.push([x1,y1]);
@@ -15,7 +15,7 @@ function tuong(x,y) {
     //Tren phai
     for (let index = 0; index < 8; index++) {
         --y1; ++x1;
-        if (y1 === 0 || x1 === 7){
+        if (y1 < 0 || x1 > 7){
             break;
         }
         arr.push([x1,y1]);
@@ -25,7 +25,7 @@ function tuong(x,y) {
     //Duoi trai
     for (let index = 0; index < 8; index++) {
         ++y1; --x1;
-        if (y1 === 7 || x1 === 0){
+        if (y1 > 7 || x1 < 0){
             break;
         }
         arr.push([x1,y1]);
@@ -35,11 +35,15 @@ function tuong(x,y) {
     //Duoi phai
     for (let index = 0; index < 8; index++) {
         ++x1; ++y1;
-        if (x1 === 7 || y1 === 7){
+        if (x1 > 7 || y1 > 7){
             break;
         }
         arr.push([x1,y1]);
     }
-    console.log(arr);
+    arr.forEach(element => {
+        var ids = `${element[0]}${element[1]}`;
+        document.getElementById(ids).innerHTML = `<img src="./img/cham.png" alt="">`
+        // console.log(ids);
+    });
     return arr;
 }

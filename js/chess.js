@@ -55,6 +55,13 @@ function move(x,y,z) {
     console.log(id);
 }
 
+function random() {
+    var randomx = Math.floor(Math.random() * 8);
+    var randomy = Math.floor(Math.random() * 8);
+    document.getElementById('x').value = randomx;
+    document.getElementById('y').value = randomy;
+}
+
 function render() {
     document.getElementById('chess-board').innerHTML = `        <tbody>
     <tr>
